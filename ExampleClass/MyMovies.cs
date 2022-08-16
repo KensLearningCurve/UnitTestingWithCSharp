@@ -36,6 +36,9 @@ namespace ExampleClass
 
         public Movie Get(int id)
         {
+            if (id <= 0)
+                return null;
+
             return _movies.SingleOrDefault(x => x.Id == id);
         }
 
